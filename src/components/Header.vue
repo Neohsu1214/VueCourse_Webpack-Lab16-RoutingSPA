@@ -11,7 +11,12 @@
             <router-link to="/" tag="li" active-class="active" exact><a>Home(RL)</a></router-link>
             <router-link to="/user/1" tag="li" active-class="active"><a>User(1)</a></router-link>
             <router-link to="/user/2" tag="li" active-class="active"><a>User(2)</a></router-link>
-            <router-link to="/user/3" tag="li" active-class="active"><a>User(3)</a></router-link>
+            
+            <!-- 以下為 https://github.com/vuejs/vue-router/tree/dev/examples/route-props 的使用例子 -->
+            <router-link to="/hello/you" tag="li" active-class="active"><a>/hello/you</a></router-link>
+            <router-link to="/static" tag="li" active-class="active"><a>/static</a></router-link>
+            <router-link to="/dynamic/1" tag="li" active-class="active"><a>/dynamic/1</a></router-link>
+            <router-link to="/attrs" tag="li" active-class="active"><a>/attrs</a></router-link>
         </ul>        
     </div>
 </template>

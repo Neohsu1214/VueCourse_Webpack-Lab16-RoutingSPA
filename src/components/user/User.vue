@@ -9,6 +9,7 @@
 
 <script>
 export default {
+    // 有另外一種比較簡便的用法 props，詳見 Hello.vue
     data: function() {
         return {
             userId: this.$route.params.id // 取得 route 中參數的方法

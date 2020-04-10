@@ -6,7 +6,7 @@
                 <hr>
                 <app-header></app-header>
                 <!-- App.vue加上 router-view 來告訴 vue-router 將頁面內容放在這邊 -->
-                <router-view></router-view>
+                <router-view foo="123"></router-view>
             </div>
         </div>
     </div>
@@ -14,6 +14,7 @@
 
 <script>
     import Header from "./components/Header";
+
     export default {
         components: {
             appHeader: Header
