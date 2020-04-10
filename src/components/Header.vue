@@ -9,7 +9,9 @@
             <!-- 連結不再是<a href>而是<router-link to> -->        
             <!-- 使被點到的項目按鈕顏色不一樣，必須將li的宣告放進router-link讓他代為產生dom物件，並告知被點到的 class名稱，及用 exact初始化哪一項被點到 -->
             <router-link to="/" tag="li" active-class="active" exact><a>Home(RL)</a></router-link>
-            <router-link to="/user" tag="li" active-class="active"><a>User(RL)</a></router-link>
+            <router-link to="/user/1" tag="li" active-class="active"><a>User(1)</a></router-link>
+            <router-link to="/user/2" tag="li" active-class="active"><a>User(2)</a></router-link>
+            <router-link to="/user/3" tag="li" active-class="active"><a>User(3)</a></router-link>
         </ul>        
     </div>
 </template>
