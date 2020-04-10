@@ -4,6 +4,9 @@
         <hr>
         <p>Loaded ID: {{ userId }}</p>
         <button @click="navigateToHome" class="btn btn-primary">Go to Home</button>
+        <hr>
+        <!-- Nested Routes View -->
+        <router-view></router-view>
     </div>
 </template>
 
