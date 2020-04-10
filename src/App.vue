@@ -3,6 +3,9 @@
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                 <h1>Routing</h1>
+                <hr>
+                <!-- App.vue加上 router-view 來告訴 vue-router 將頁面內容放在這邊 -->
+                <router-view></router-view>
             </div>
         </div>
     </div>
