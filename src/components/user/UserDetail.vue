@@ -4,14 +4,14 @@
         <p>User Loaded! ID: {{ $route.params.id }}</p>
         <router-link 
             tag="button" 
-            :to="'/user/' + $route.params.id + '/edit' "
+            :to="'/user/' + $route.params.id + '/edit' + '?locale=en&q=100' "
             class="btn btn-primary"
         >Edit User</router-link>
 
         <!-- 以命名路徑的方式進行 -->
         <router-link 
             tag="button" 
-            :to="{ name: 'userEdit', params: { id: $route.params.id }}"
+            :to="{ name: 'userEdit', params: { id: $route.params.id }, query: { locale: 'tw', q: 200}}"
             class="btn btn-info"
         >Edit User</router-link>
         
