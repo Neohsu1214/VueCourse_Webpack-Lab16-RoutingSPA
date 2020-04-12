@@ -25,12 +25,13 @@ export default {
             link: { 
                 name: 'userEdit', 
                 params: { 
-                    id: $route.params.id 
+                    id: this.$route.params.id 
                 }, 
                 query: { 
                     locale: 'tw', 
                     q: 200
-                }
+                },
+                hash: '#ancherTag'  // 會發現點了後連線網址會多一個 #ancherTag 了
             }
         }
     }
