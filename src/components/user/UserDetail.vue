@@ -11,9 +11,28 @@
         <!-- 以命名路徑的方式進行(要先定義在 routes.js) -->
         <router-link 
             tag="button" 
-            :to="{ name: 'userEdit', params: { id: $route.params.id }, query: { locale: 'tw', q: 200}}"
+            :to="link"
             class="btn btn-info"
         >Edit User</router-link>
         
     </div>
 </template>
+
+<script>
+export default {
+    data: function() {
+        return {
+            link: { 
+                name: 'userEdit', 
+                params: { 
+                    id: $route.params.id 
+                }, 
+                query: { 
+                    locale: 'tw', 
+                    q: 200
+                }
+            }
+        }
+    }
+}
+</script>
