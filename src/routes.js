@@ -6,6 +6,7 @@ import UserEdit from "./components/user/UserEdit";
 import Hello from "./components/Hello";
 import Foo from "./components/foobar/Foo";
 import Bar from "./components/foobar/Bar";
+import PageNotFound from "./components/PageNotFound";
 
 export const routes = [
     { path: '', component: Home }, // 沒有給定 path 代表 Home 為 root route
@@ -29,7 +30,9 @@ export const routes = [
       }
     },
     // 設定 redirect 可以指定將給定的 path 轉換到另一個 URI (此測試請直接在瀏覽器網址列給定 http://localhost:8080/redirect-me 測試)
-    { path: '/redirect-me', redirect: '/user' }
+    { path: '/redirect-me', redirect: '/user' },
+    // 當上述路徑都不符合時，要給定一個預設404錯誤頁面
+    { path: '*', component: PageNotFound}
 ];
 
 function dynamicPropsFn (route) {
