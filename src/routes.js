@@ -14,7 +14,19 @@ export const routes = [
         children: [ // 加上 children 就可以進行 nested routes
           { path: "", component: UserStart }, // 完整路徑為 /user
           { path: ":id", component: UserDetail }, // 完整路徑為 /user/:id
-          { path: ":id/edit", component: UserEdit, name: "userEdit" } // 完整路徑為 /user/:id/edit, 可以幫路徑命名(ex:userEdit)並於<route-link>中使用
+          { 
+            path: ":id/edit", // 完整路徑為 /user/:id/edit, 可以幫路徑命名(ex:userEdit)並於<route-link>中使用
+            component: UserEdit, 
+            name: "userEdit", 
+            beforeEnter: (to, from, next) => {
+              // this會失效，因為還沒建立，必須改用 vm (ViewModel) 來存取設定
+              console.log('inside route setup ');
+              if (true) {
+                next();
+              } else {
+                next(false);
+              }
+          } } 
     ] }, 
     // 以下為 https://github.com/vuejs/vue-router/tree/dev/examples/route-props 的使用範例
     { path: '/hello/:name', component: Hello, props: true }, // Pass route.params to props | 直接把 :name 當成 props 使用

@@ -23,6 +23,12 @@ const router = new VueRouter(
   }
 );
 
+// 透過 beforeEach 可以對每次切換 route 路徑實作一些事情(Guard)
+router.beforeEach((to, from, next) => {
+  console.log('global beforeEach');
+  next(); //  記得要加上 next(); 不然無法到下一頁去
+});
+
 new Vue({
   el: '#app',
   router: router, // 也可以簡寫成 router 就好
