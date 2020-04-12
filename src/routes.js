@@ -27,7 +27,9 @@ export const routes = [
         default: Foo,
         'bar': Bar
       }
-    }
+    },
+    // 設定 redirect 可以指定將給定的 path 轉換到另一個 URI (此測試請直接在瀏覽器網址列給定 http://localhost:8080/redirect-me 測試)
+    { path: '/redirect-me', redirect: '/user' }
 ];
 
 function dynamicPropsFn (route) {
