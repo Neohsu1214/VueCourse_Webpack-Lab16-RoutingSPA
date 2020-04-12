@@ -24,6 +24,8 @@ export default {
         } else {
             if (confirm('Are You Sure?')) {
                 next();
+            } else {
+                next(false);
             }
         }
     }
