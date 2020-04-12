@@ -18,6 +18,10 @@
             <router-link to="/static" tag="li" active-class="active"><a>/static</a></router-link>
             <router-link to="/dynamic/1" tag="li" active-class="active"><a>/dynamic/1</a></router-link>
             <router-link to="/attrs" tag="li" active-class="active"><a>/attrs</a></router-link>
+
+            <!-- 可以在一個 route path中給定多個 components，讓不同component替換掉不同命名的 router-view -->
+            <router-link to="/demoMultiRouterView" tag="li" active-class="active"><a>FooBar</a></router-link>
+
         </ul>        
     </div>
 </template>
